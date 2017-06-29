@@ -4,6 +4,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * SokobanSolution entity
+ */
 @Entity(name="SokobanSolutions")
 public class SokobanSolution {
 

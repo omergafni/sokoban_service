@@ -6,6 +6,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+/**
+ * DbHandler manages connection to the database
+ */
 public class DbHandler {
 
     private SessionFactory factory;
@@ -16,6 +19,10 @@ public class DbHandler {
         factory = configuration.buildSessionFactory();
     }
 
+    /**
+     * Adding a sokoban solution to the database
+     * @param sol
+     */
     public void addSolution(SokobanSolution sol) {
         Session session = factory.openSession();
         Transaction tx = null;
@@ -33,6 +40,11 @@ public class DbHandler {
         }
     }
 
+    /**
+     * Getting a solution from the database
+     * @param levelName is the level's desired solution
+     * @return a level solution
+     */
     public String getSolution(String levelName) {
         Session session = null;
 

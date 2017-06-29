@@ -6,6 +6,9 @@ import com.sokoban.service.db.SokobanSolution;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
+/**
+ * SolutionService provide an API to the jersey service
+ */
 @Path("solutions")
 public class SolutionService {
 
